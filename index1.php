@@ -15,8 +15,6 @@
 
     <link href="../css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="../css/select2.css" rel="stylesheet" type="text/css" />
-    
-    
     <script src="../js/jquery-1.12.3.js" type="text/javascript"></script>
     <style>
     .no-print{
@@ -45,9 +43,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="../login.php">Admin</a></li>
-        <li><a href="../pages/resident/login.php">Resident</a></li>
-        
+        <li><a href="../pages/resident/residenthome.php">Sign In</a></li>
         
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -91,8 +87,6 @@
 <script src="../js/buttons.print.min.js" type="text/javascript"></script>
 
 <script src="../js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
-
-            
 <!-- AdminLTE App -->
 <script src="../js/AdminLTE/app.js" type="text/javascript"></script>
 

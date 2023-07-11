@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Barangay Talabaan Management System</title>
+    <title>Barangay Information System</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- bootstrap 3.0.2 -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -15,17 +15,8 @@
 
     <link href="../css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="../css/select2.css" rel="stylesheet" type="text/css" />
-    
-    
     <script src="../js/jquery-1.12.3.js" type="text/javascript"></script>
-    <style>
-    .no-print{
-        display:none;
-    }
-    .dataTables_filter input { 
-    padding-top: 20px;
-    padding-bottom: 20px;}
-    </style>
+
 </head>
 <body>
 <nav class="navbar navbar-inverse" style="border-radius:0px;">
@@ -45,34 +36,20 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="about.php">About</a></li>
         <li><a href="../login.php">Admin</a></li>
         <li><a href="../pages/resident/login.php">Resident</a></li>
-        
-        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
+<div class="wrapper row-offcanvas row-offcanvas-left">
 
-
-      <img src="../img/barangay.png" width="100%" height="100%">
-   
-
-
-                                      
-
-    <tbody>
-        <?php
-        include "../pages/connection.php";
-        $squery = mysqli_query($con, "SELECT *,CONCAT(lname, ', ', fname, ' ', mname) as cname FROM tblresident");
-        while($row = mysqli_fetch_array($squery))
-       
-        ?>
-    </tbody>
-</table>
-
+<div class="breadcrumb">
+    <h3>Welcome to About Page</h3>
 </div>
+
 </div>
 
 </body>
@@ -91,25 +68,14 @@
 <script src="../js/buttons.print.min.js" type="text/javascript"></script>
 
 <script src="../js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
-
-            
 <!-- AdminLTE App -->
 <script src="../js/AdminLTE/app.js" type="text/javascript"></script>
 
 <script type="text/javascript">
   $(function() {
       $("#table").dataTable({
-         "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 0,5 ] } ],"aaSorting": [],
-         "dom":' <"search"f><"top"l>rt<"bottom"ip><"clear">'
+         "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 0,5 ] } ],"aaSorting": []
       });
   });
-
-  $(document).ready(function () {             
-  $('.dataTables_filterinput[type="search"]').css(
-     {'width':'350px','display':'inline-block'}
-  );
-});
 </script>
-
-
 </html>
